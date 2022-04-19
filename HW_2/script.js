@@ -24,11 +24,11 @@ if (time >= 0 && time <= 15){
 //
 let day = Math.round(Math.random() * (31 - 1) + 1);
 if (day > 0 && day <= 10){
-    console.log(day);
+    console.log('1 decade');
 }else if (day > 10 && day <= 20){
-    console.log(day);
+    console.log('2 decade');
 }else if (day > 20 && day <= 31){
-    console.log(day);
+    console.log('3 decade');
 }
 
 // - Скласти розклад на тиждень за домопоги switch. Користувач вводить порядковий номер дня тижня і на екрані відображається інфа що заплановано на цей день (можна замість плану на день, назву дня англійською).
