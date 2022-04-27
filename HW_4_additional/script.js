@@ -127,8 +127,35 @@ console.log(sum);
 //
 // - Створити функцію яка приймає масив будь яких объектів, та повертає масив ключів всіх обєктів
 //   EXAMPLE:
-//   [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ name, age, model ]
+let someArr =  [{name: 'Dima', age: 13}, {model: 'Camry'}];
 //
+let newArr = [];
+function keyBack(array){
+    let i = 0;
+    for (const element of array) {
+        for (const elementKey in element) {
+            newArr[i] = elementKey;
+            i++;
+        }
+    }
+    return newArr;
+}
+keyBack(someArr);
+console.log(newArr);
 // - Створити функцію яка приймає масив будь яких объектів, та повертає масив значень всіх обєктів
 //   EXAMPLE:
 //   [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ Dima, 13, Camry ]
+let newArr1 = [];
+function keyBack2(array){
+    let i = 0;
+    for (const element of array) {
+        for (const elementKey in element) {
+            newArr1[i] = element[elementKey];
+            i++;
+        }
+    }
+    return newArr1;
+}
+keyBack2(someArr);
+console.log(newArr1);
+
