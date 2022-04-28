@@ -131,5 +131,17 @@ let sum = (array) => {
 };
 sum([1,2,3,4,5])
 // -створити функцію, яка приймає масив з 2х об'єктів, та міняє їх місцями.
-let rever = (array) => array.reverse();
-console.log(rever([{id:1},{id:2}]));
+//let rever = (array) => array.reverse();
+//console.log(rever([{id:1},{id:2}]));
+let arr1 = [1,2,3,4,5,6];
+let rever = (array) => {
+    for (let i = 0; i < array.length / 2; i++) {
+        let t = array[i];
+        array[i] = array[array.length - 1 - i];
+        array[array.length - 1 - i] = t;
+    }
+    return array;
+}
+rever(arr1);
+console.log(arr1);
+
