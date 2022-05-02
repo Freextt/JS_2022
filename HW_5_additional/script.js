@@ -79,14 +79,18 @@ foo([9,8,0,4],0);
 // [0,0,1,0]   => [1,0,0,0]
 let foo2 = (array) => {
     let newArr = [];
+    let i = 0;
+    let j = array.length - 1;
     for (const element of array) {
        if (element !== 0){
-           newArr.push(element);
+           newArr[i] = element;
+           i++;
        }
     }
     for (const element of array) {
         if (element === 0){
-            newArr.push(element);
+            newArr[j] = element;
+            j--;
         }
     }
     console.log(newArr);
