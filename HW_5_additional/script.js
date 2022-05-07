@@ -97,3 +97,9 @@ let foo2 = (array) => {
     return newArr;
 }
 foo2([1,0,6,0,3]);
+
+
+
+
+////
+

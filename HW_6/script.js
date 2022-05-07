@@ -112,7 +112,9 @@ console.log(deck.filter((item) => {
 console.log(deck.filter(card => card.value === '6'));
 console.log(deck.filter(card => card.color === 'red'));
 console.log(deck.filter(card => card.cardSuit === 'diamonds'));
-let hightCards = ['9','10','jack','queen','king','ace'];
-let clubs = deck.filter( card => card.cardSuit ==='clubs'&& hightCards.includes(card.value));
-console.log(clubs);
+console.log(deck.filter(card => card.cardSuit === 'clubs' && (card.value >= '9'||card.value === '10')));
+//let hightCards = ['9','10','jack','queen','king','ace'];
+//let clubs = deck.filter( card => card.cardSuit ==='clubs'&& hightCards.includes(card.value));
+//console.log(clubs);
+
 
