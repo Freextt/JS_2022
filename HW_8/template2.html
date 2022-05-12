@@ -50,8 +50,7 @@
     let main = document.getElementById('main_header');
     main.classList.add('march_2022');
     console.log(main);
-    let chg = document.querySelector('ul');
-    chg.style.width = '400px';
+    document.querySelector('ul')[0].style.width = '400px';
     let links = document.getElementsByClassName('linkList');
     for (const linkElement of links) {
         linkElement.style.width = '50%';
