@@ -21,7 +21,7 @@ let numArr = [1231,452537,253475,[517534163],246684526,[4628746,[4264528]],42678
 let newArr = [];
 function numBack(arr){
     for (let i = 0; i < arr.length; i++) {
-        if(typeof arr[i] === 'number'){
+        if(typeof arr[i] !== 'object'){
             newArr.push(arr[i]);
         }
         else {
