@@ -234,28 +234,82 @@ let usersList = [
 ];
 
 //Створити під кожен елемент окремий блок. В цьому блоці, під кожну властивість, та властивості внутрішніх об'єктів створити свої окремі блок.
-for (const user of usersList) {
-    let block = document.createElement('div');
-    for (const key in user) {
-        let subBlock = document.createElement('div');
-        block.appendChild(subBlock);
-            if(typeof user[key] === 'object'){
-                for (const subKey in key) {
-                    let details = document.createElement('div');
-                    subBlock.appendChild(details);
-                    if (typeof key[subKey] === 'object'){
-                        for (const info of subKey) {
-                            let prop = document.createElement('div');
-                            details.appendChild(prop);
+
+for (const users of usersList) {
+
+    const usersWrap = document.createElement('div');
+
+    document.body.appendChild(usersWrap);
+
+    usersWrap.classList.add('usersWrap');
+
+    for (const key in users) {
+
+        const userDiv = document.createElement('div');
+
+        usersWrap.appendChild(userDiv);
+
+        let userKey = users[key]
+
+        if (typeof userKey !== 'object') {
+
+            const tittles = document.createElement('h1');
+
+
+            userDiv.appendChild(tittles);
+
+        } else {
+
+            const tittle = document.createElement('h1');
+
+
+            userDiv.appendChild(tittle)
+
+            for (const userItemKey in userKey) {
+
+                const userItemDiv = document.createElement('div');
+
+                userDiv.appendChild(userItemDiv);
+
+                let keyOfUserItem = userKey[userItemKey];
+
+                if (typeof keyOfUserItem !== 'object') {
+
+                    const subtitles = document.createElement('h3');
+
+                    userItemDiv.appendChild(subtitles);
+
+                } else {
+
+                    const subtitles = document.createElement('h3');
+
+                    userItemDiv.appendChild(subtitles);
+
+                    for (const keyItem in keyOfUserItem) {
+
+                        const keyItemDiv = document.createElement('div');
+
+                        userItemDiv.appendChild(keyItemDiv);
+
+                        if (typeof keyOfUserItem[keyItem] !== 'object') {
+
+                            const par = document.createElement('p');
+
+                            keyItemDiv.appendChild(par);
+
                         }
+
                     }
+
                 }
+
             }
+
         }
-    document.body.appendChild(block);
+
+    }
+
 }
-
-
 //--------
 //за допомоги рекурсії перебрати структуру сторінки.
 // зробити об'єкт, всі заголовки покласти в (масив) характеристику headings,всі параграфи покласти в характеристику (масив) paragraphs
