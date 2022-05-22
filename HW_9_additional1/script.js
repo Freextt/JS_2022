@@ -244,7 +244,7 @@ for (const users of usersList) {
 
     for (const key in users) {
 
-        const userDiv = document.createElement('div');
+        const userDiv = document.createElement('h1');
 
         usersWrap.appendChild(userDiv);
 
@@ -252,19 +252,19 @@ for (const users of usersList) {
 
         if (typeof userKey !== 'object') {
 
-            const tittles = document.createElement('div');
+            const tittles = document.createElement('h1');
 
             userDiv.appendChild(tittles);
 
         } else {
 
-            const tittle = document.createElement('div');
+            const tittle = document.createElement('h1');
 
             userDiv.appendChild(tittle)
 
             for (const userItemKey in userKey) {
 
-                const userItemDiv = document.createElement('div');
+                const userItemDiv = document.createElement('h1');
 
                 userDiv.appendChild(userItemDiv);
 
@@ -290,7 +290,7 @@ for (const users of usersList) {
 
                         if (typeof keyOfUserItem[keyItem] !== 'object') {
 
-                            const par = document.createElement('div');
+                            const par = document.createElement('p');
 
                             keyItemDiv.appendChild(par);
                         }
@@ -306,6 +306,7 @@ for (const users of usersList) {
 // за допомоги рекурсії перебрати структуру сторінки. зробити об'єкт,
 // всі заголовки покласти в (масив) характеристику headings,всі параграфи покласти в характеристику (масив) paragraphs
 //
+
 let res = {
     headings: [],
     paragraphs: []
@@ -326,4 +327,7 @@ let fn = (item) => {
 console.log(fn(document.body));
 // ------
 //
+// зробити div contenteditable ввести будь яке ціле слово. та при натисканні табуляції перетворити його на подвійний тег
+// asd ->tab-> <asd></asd>
+
 
