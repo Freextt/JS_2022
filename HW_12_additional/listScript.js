@@ -1,11 +1,11 @@
 let block = document.createElement('div');
 let txt = JSON.parse(localStorage.getItem('products'));
 for (const element of txt) {
-    let par = document.createElement('p');
+    let par = document.createElement('div');
     par.innerHTML = `Name: ${element.name},
     Quantity: ${element.quantity},
     Price: ${element.price},
-    Image: ${element.image}
+    Image: <img src="${element.image}" alt="">
     `;
     let btn = document.createElement('button');
     btn.setAttribute('id','deleteOneProduct');
