@@ -28,8 +28,8 @@ btn.addEventListener('click',function (){
              let postBlock = document.createElement('div');
              postBlock.innerText = `${post.title}`;
              let btn = document.createElement('button');
-             btn.innerHTML = '<a href="../post-details/post_details.html">Click</a>';
-             btn.onclick = (e) => {
+             btn.innerHTML = '<a style="text-decoration: none" href="../post-details/post_details.html">Click</a>';
+             btn.onclick = () => {
                  localStorage.setItem('post',JSON.stringify(post));
              }
              postBlock.appendChild(btn);

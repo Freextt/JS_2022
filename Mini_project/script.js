@@ -14,8 +14,8 @@ fetch('https://jsonplaceholder.typicode.com/users')
             Name: ${user.name}
             `
             let btn = document.createElement('button');
-            btn.innerHTML = '<a href="user-details/user_details.html">Click</a>' ;
-            btn.onclick = (e) => {
+            btn.innerHTML = '<a style="text-decoration: none" href="user-details/user_details.html">Click</a>' ;
+            btn.onclick = () => {
                 localStorage.setItem('user',JSON.stringify(user));
             }
             block.appendChild(btn);
